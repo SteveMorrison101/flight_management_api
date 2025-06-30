@@ -1,0 +1,24 @@
+How it went:
+The project was a lot more work than we initially expected. There were some parts that went smoothly, especially in the beginning when setting up the
+entities and basic Spring Boot API. Connecting everything and getting the relationships to save correctly was a lot more complicated.
+There was also some confusion around bidirectional relationships and how data had to be loaded for the CLI to work
+right.
+
+What was good:
+
+The structure of the code is pretty organized, and the main entities (City, Airport, Passenger, Aircraft) make sense and map to real-world
+concepts well. The endpoints work, and the API serves the expected data once the relationships and loading were figured out.The CLI
+tool has a user menu and was able to call the endpoints and print information out.
+
+What was bad:
+
+JPA/Hibernate relationship mapping was a huge pain, especially with ManyToMany fields. It took way longer than expected to get the relationships
+to persist and show up on both sides. Debugging JSON serialization/deserialization and why things were showing up as null was frustrating.
+There were some little issues with git pushes, which wasted time. Having to keep  deleting and resetting the database to troubleshoot the relationship
+mappings was time-consuming.
+
+What could be improved:
+
+Spend more time planning out how the data will be loaded and how relationships will be set up before coding (would probably save a lot of time).
+Next time, look up more examples of bidirectional JPA mappings and test small pieces instead of trying to setup the whole thing at once.
+Write some tests for the REST API so it’s easier to see right away if the data is coming back in the correct format.
